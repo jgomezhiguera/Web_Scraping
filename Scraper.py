@@ -10,7 +10,7 @@ soup = BeautifulSoup(page.content)
 objectives = soup.find_all('div', {"class" : "col-xs-8 col-sm-12 col-data"})
 
 filename = "offers.csv"
-f = open(filename, "w")
+f = open(filename, "w") # You need to change 'w' to 'a' for append new results
 headers = "product, brand, current_price, offer_date\n"
 f.write(headers)
 
